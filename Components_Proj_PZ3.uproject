@@ -7,7 +7,10 @@
 		{
 			"Name": "Components_Proj_PZ3",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	]
 }
