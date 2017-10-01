@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "Barrack.h"
 #include "Components_Proj_PZ3GameModeBase.generated.h"
 
 /**
@@ -14,7 +15,11 @@ class COMPONENTS_PROJ_PZ3_API AComponents_Proj_PZ3GameModeBase : public AGameMod
 {
 	GENERATED_BODY()
 	
-	
+public:
+    virtual void BeginPlay()override;
+    
+    UPROPERTY()
+    ABarrack* MainBarrack;
 	
 	
 };
