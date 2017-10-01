@@ -16,7 +16,10 @@ public:
 	ABarrackUnit();
     
     UPROPERTY()
-    UStaticMeshComponent* BarrackUnit;
+    UStaticMeshComponent* BarrackUnitMesh;
+    
+    UPROPERTY()
+    UStaticMeshComponent* MeshComponentDynam;
 
 protected:
 	// Called when the game starts or when spawned
@@ -30,6 +33,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     
-	
+    void AddComponentDynam();
 	
 };
