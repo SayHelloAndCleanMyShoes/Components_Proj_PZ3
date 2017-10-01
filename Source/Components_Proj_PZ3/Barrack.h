@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "BarrackUnit.h"
 #include "Barrack.generated.h"
 
 UCLASS()
@@ -16,6 +17,9 @@ public:
 	ABarrack();
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     UStaticMeshComponent* BarrackMeshComponent;
+    
+    UPROPERTY()
+    ABarrackUnit* BarrackUnitToSpawn;
 
 protected:
 	// Called when the game starts or when spawned

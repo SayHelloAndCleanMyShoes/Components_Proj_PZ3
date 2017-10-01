@@ -25,7 +25,8 @@ ABarrack::ABarrack()
 }
 
 void ABarrack::SpawnUnitByTimer() {
-    
+    FTransform transform;
+    BarrackUnitToSpawn = (ABarrackUnit*) GetWorld()->SpawnActor(ABarrackUnit::StaticClass(), &spawnPointPosition, &FRotator::ZeroRotator);
 }
 
 // Called when the game starts or when spawned
@@ -33,7 +34,7 @@ void ABarrack::BeginPlay()
 {
 	Super::BeginPlay();
     FTimerHandle Timer;
-    GetWorldTimerManager().SetTimer(Timer, this, &ABarrack::SpawnUnitByTimer, 5, true);
+    GetWorldTimerManager().SetTimer(Timer, this, &ABarrack::SpawnUnitByTimer, 5);
     
 	
 }
