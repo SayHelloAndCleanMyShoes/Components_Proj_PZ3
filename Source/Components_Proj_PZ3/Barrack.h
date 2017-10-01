@@ -26,6 +26,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
     
     
-	
+	UPROPERTY()
+    FVector spawnPointPosition;
+    
+    void SpawnUnitByTimer();
 	
 };

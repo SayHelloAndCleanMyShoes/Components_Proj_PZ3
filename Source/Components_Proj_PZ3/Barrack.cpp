@@ -19,14 +19,21 @@ ABarrack::ABarrack()
         BarrackMeshComponent->SetStaticMesh(LoadedMesh.Object);
     }
     RootComponent = BarrackMeshComponent;
+    
+    spawnPointPosition = (GetActorLocation() + FVector(50, 0, 0));
 
+}
+
+void ABarrack::SpawnUnitByTimer() {
+    
 }
 
 // Called when the game starts or when spawned
 void ABarrack::BeginPlay()
 {
 	Super::BeginPlay();
-    
+    FTimerHandle Timer;
+    GetWorldTimerManager().SetTimer(Timer, this, &ABarrack::SpawnUnitByTimer, 5, true);
     
 	
 }
